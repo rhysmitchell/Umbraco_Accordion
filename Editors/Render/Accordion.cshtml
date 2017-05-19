@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+<link href="~/App_Plugins/Accordion/Editors/Assets/Css/jquery-ui.structure.min.css" rel="stylesheet" />
+<link href="~/App_Plugins/Accordion/Editors/Assets/Css/bootstrap-theme.min.css" rel="stylesheet" />
+<link href="~/App_Plugins/Accordion/Editors/Assets/Css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/App_Plugins/Accordion/Editors/Assets/Css/Custom.css" rel="stylesheet" />
+<link href="~/App_Plugins/Accordion/Editors/Assets/Css/jquery-ui.min.css" rel="stylesheet" />
+@if (Model.sections != null)
+{
+    <div class="accordion">
+        @foreach(dynamic item in Model.sections)
+        {
+            <h3>@item.title.ToString()</h3>
+            <div>
+                <p>
+                    @Html.Raw(item.content.value.ToString())
+                </p>
+            </div>
+        }
+    </div>
+}
+<script src="~/App_Plugins/Accordion/Editors/Assets/Js/bootstrap.min.js" ></script>
+<script src="~/App_Plugins/Accordion/Editors/Assets/Js/jquery-3.1.1.min.js"></script>
+<script>
+    (function () {
+        $(".accordion").accordion();
+    })();
+</script>

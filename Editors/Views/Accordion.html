@@ -1,0 +1,12 @@
+﻿<div ng-controller="Accordion.Controller as viewModel">
+
+    <div class="text-center">
+        <a class="btn btn-secondary" ng-click="viewModel.openOverlay()">Open Accordion</a>
+    </div>
+
+    <umb-overlay ng-if="viewModel.overlay.show"
+                 model="viewModel.overlay"
+                 view="viewModel.overlay.view"
+                 position="right">
+    </umb-overlay>
+</div>

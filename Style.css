@@ -1,0 +1,22 @@
+﻿.center-align {
+    text-align: center;
+}
+
+.eighty-width
+{
+    width: 80%;
+}
+
+.full-width
+{
+    width: 100%;
+}
+
+.margins {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.tiny-padding {
+    padding: 2%;
+}

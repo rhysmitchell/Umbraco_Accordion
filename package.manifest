@@ -1,0 +1,18 @@
+﻿{
+  "gridEditors": [
+    {
+      "name": "Accordion",
+      "alias": "Accordion",
+      "view": "/App_Plugins/Accordion/Editors/Views/Accordion.html",
+      "render": "/App_Plugins/Accordion/Editors/Render/Accordion.cshtml",
+      "icon": "icon-map"
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Accordion/Editors/Controllers/Accordion.Controllers.js",
+    "~/App_Plugins/Accordion/Editors/Controllers/AccordionOverlay.Controllers.js"
+  ],
+  "css": [
+    "~/App_Plugins/Accordion/Style.css"
+  ]
+}

@@ -1,0 +1,41 @@
+﻿<div ng-controller="AccordionOverlay.Controller">
+    <h4>Sections</h4>
+    <fieldset data-ng-repeat="section in model.editModel track by $index">
+        <div class="center-align">
+            <a class="eighty-width btn {{showDiv ? 'btn-primary' : 'btn-neutral'}}"
+           ng-click="showDiv = !showDiv">{{section.title != '' ? section.title : 'New Item' }}</a>
+            <a href="" ng-click="removeSection(model, section)" class="iconBox ng-scope">
+                <i class="icon icon-remove" title="Remove"></i>
+            </a>
+        </div>
+
+        <div ng-show="showDiv" class="margins">
+            <div class="tiny-padding">
+                <hr />
+            </div>
+                <label class="control-label" for="txtSection">
+                    Title
+                </label>
+            
+                <input type="text" name="txtSection" ng-model="section.title" />
+                
+                <div class="tiny-padding"></div>
+                
+                <label class="control-label" for="txtContent">
+                    Content
+                </label>
+            
+            <umb-editor model="section.content"></umb-editor>
+                <div class="tiny-padding">
+                    <hr />
+                </div>
+            </div>
+    </fieldset>
+
+    
+    <div class="umb-add-row tiny-padding eighty-width">
+        <a href="" ng-click="addNewSection(model)" class="iconBox ng-scope">
+            <i class=" icon icon-add" title="Add"></i>
+        </a>
+    </div>
+</div>
